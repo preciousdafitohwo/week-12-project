@@ -2,32 +2,92 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f0f4f7; 
+  padding: 10px 20px;
+  border-bottom: 2px solid #ccc;
+}
+
+header img {
+  display: block;
+  margin-right: 20px;
+}
+
+nav {
+  flex: 1;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.link {
+  text-decoration: none;
+  color: #007bff; 
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.link:hover, .user-actions:hover {
+  background-color: #e0e7ff; 
+  color: #0056b3; 
+}
+
+.user-actions {
+  display: flex;
+  align-items: center;
+  color: #007bff; 
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+
+.main-content {
+  padding: 20px;
+  min-height: calc(100vh - 160px); 
+  background-color: #f9f9f9; 
+}
+
+
+.footer {
+  text-align: center;
+  padding: 10px 0;
+  background-color: #f0f4f7; 
+  border-top: 2px solid #ccc;
+  position: relative;
+  width: 100%;
+}
+
+.footer p {
+  margin: 0;
+  color: #555;
+}
+
+/* Extra styling for mobile responsiveness */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
   }
-}
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
+  .link {
+    margin-bottom: 10px;
+  }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  .user-actions {
+    margin-top: 10px;
   }
 }
