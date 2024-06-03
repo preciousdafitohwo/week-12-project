@@ -39,10 +39,10 @@ export default async function RootLayout({ children }) {
         <body>
           <header>
             <Image
-              src="/logo.webp"
+              src="/logo1.webp"
               alt="Stay Active Logo"
-              width={150}
-              height={150}
+              width={200}
+              height={200}
             />
             <nav>
               <Link href="/" className="link">Home</Link>

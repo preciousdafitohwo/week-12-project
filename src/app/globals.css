@@ -10,13 +10,34 @@ html, body {
   font-family: Arial, sans-serif;
 }
 
+.main-div {
+  display: flex;
+  flex-direction: row;
+}
+.section-1 {
+  width: 45%;
+  height: 50dvh;
+  padding: 10px;
+  object-fit: contain;}
 
+/* .sign-in-btn {
+  
+    margin-left: 50px;
+} */
+
+
+
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: #f0f4f7; 
-  padding: 10px 20px;
+  padding: 5px 20px;
   border-bottom: 2px solid #ccc;
 }
 
@@ -54,10 +75,12 @@ nav {
   border-radius: 5px;
 }
 
-
+li {
+  list-style: circle;
+}
 .main-content {
   padding: 20px;
-  min-height: calc(100vh - 160px); 
+  min-height: calc(81vh); 
   background-color: #f9f9f9; 
 }
 
