@@ -13,7 +13,8 @@ import Link from "next/link";
 
 export const metadata = {
   title: "StayActive",
-  description: "Bringing you complete wellness. Access our free online videos in different health and fitness discplines and book a session with one of our specialist trainers"
+  description:
+    "Bringing you complete wellness. Access our free online videos in different health and fitness discplines and book a session with one of our specialist trainers",
 };
 
 export default async function RootLayout({ children }) {
@@ -31,7 +32,7 @@ export default async function RootLayout({ children }) {
   return (
     <ClerkProvider>
       <html lang="en">
-      <head>
+        <head>
           <title>{metadata.title}</title>
           <meta name="description" content={metadata.description} />
           <link rel="icon" href="/logo.webp" type="image/webp" />
@@ -45,11 +46,21 @@ export default async function RootLayout({ children }) {
               height={200}
             />
             <nav>
-              <Link href="/" className="link">Home</Link>
-              <Link href="/about" className="link">About Us</Link>
-              <Link href="/trainers" className="link">Personal Trainers</Link>
-              <Link href="/blog" className="link">Blog</Link>
-              <Link href="/account" className="link">Account</Link>
+              <Link href="/" className="link">
+                Home
+              </Link>
+              <Link href="/about" className="link">
+                About Us
+              </Link>
+              <Link href="/trainers" className="link">
+                Personal Trainers
+              </Link>
+              <Link href="/blog" className="link">
+                Blog
+              </Link>
+              <Link href="/account" className="link">
+                Account
+              </Link>
             </nav>
             <div className="user-actions">
               <SignedOut>
@@ -60,9 +71,7 @@ export default async function RootLayout({ children }) {
               </SignedIn>
             </div>
           </header>
-          <main className="main-content">
-            {children}
-          </main>
+          <main className="main-content">{children}</main>
           <footer className="footer">
             <p>Made by Precious, Hannah, Nik & Themba &copy; 2024</p>
           </footer>
