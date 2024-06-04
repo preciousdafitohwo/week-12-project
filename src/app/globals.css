@@ -2,9 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
@@ -18,14 +17,13 @@ html, body {
   width: 45%;
   height: 50dvh;
   padding: 10px;
-  object-fit: contain;}
+  object-fit: contain;
+}
 
 /* .sign-in-btn {
   
     margin-left: 50px;
 } */
-
-
 
 .home {
   display: flex;
@@ -36,7 +34,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #f0f4f7; 
+  background-color: #f0f4f7;
   padding: 5px 20px;
   border-bottom: 2px solid #ccc;
 }
@@ -55,21 +53,22 @@ nav {
 
 .link {
   text-decoration: none;
-  color: #007bff; 
+  color: #007bff;
   font-weight: bold;
   padding: 10px;
   border-radius: 5px;
 }
 
-.link:hover, .user-actions:hover {
-  background-color: #e0e7ff; 
-  color: #0056b3; 
+.link:hover,
+.user-actions:hover {
+  background-color: #e0e7ff;
+  color: #0056b3;
 }
 
 .user-actions {
   display: flex;
   align-items: center;
-  color: #007bff; 
+  color: #007bff;
   font-weight: bold;
   padding: 10px;
   border-radius: 5px;
@@ -80,15 +79,14 @@ li {
 }
 .main-content {
   padding: 20px;
-  min-height: calc(81vh); 
-  background-color: #f9f9f9; 
+  min-height: calc(81vh);
+  background-color: #f9f9f9;
 }
-
 
 .footer {
   text-align: center;
   padding: 10px 0;
-  background-color: #f0f4f7; 
+  background-color: #f0f4f7;
   border-top: 2px solid #ccc;
   position: relative;
   width: 100%;
