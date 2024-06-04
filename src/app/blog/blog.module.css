@@ -1,0 +1,129 @@
+.bookingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.trainers {
+  display: flex;
+  gap: 1em;
+  margin-bottom: 1em;
+}
+
+.trainerButton {
+  padding: 0.5em 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+
+.trainerButton:hover {
+  background-color: #e0e0e0;
+}
+
+.selectedTrainer {
+  background-color: #add8e6; /* Light blue color to indicate selection */
+  border: 1px solid #000; /* Black border to highlight the selected button */
+}
+
+.selectionContainer {
+  display: flex;
+  align-items: flex-start;
+  gap: 2em;
+  margin-top: 1em;
+}
+
+.calendarContainer {
+  flex: 1;
+}
+
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(
+    7,
+    1fr
+  ); /* 7 columns for the days of the week */
+  gap: 1em;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.blank {
+  border: 1px solid transparent; /* invisible border to maintain grid structure */
+}
+
+.date {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.date h2 {
+  margin: 0 0 0.5em;
+}
+
+.selectedDate {
+  background-color: #add8e6; /* Light blue color to indicate selection */
+  border: 1px solid #000; /* Black border to highlight the selected button */
+}
+
+.timeSlotsContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timeSlot {
+  margin: 0.2em 0;
+  padding: 0.5em;
+  border: none;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.timeSlot:hover {
+  background-color: #e0e0e0;
+}
+
+.selectedTimeSlot {
+  background-color: #add8e6; /* Light blue color to indicate selection */
+  border: 1px solid #000; /* Black border to highlight the selected button */
+}
+
+.confirmContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.confirmButton {
+  margin-top: 1em;
+  padding: 0.5em 1em;
+  border: none;
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.confirmButton:hover {
+  background-color: #45a049;
+}
+
+.confirmationMessage {
+  margin-top: 1em;
+  padding: 0.5em;
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+  border-radius: 5px;
+  color: #155724;
+}
