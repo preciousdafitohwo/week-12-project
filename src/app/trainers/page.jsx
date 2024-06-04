@@ -1,5 +1,6 @@
 import Styles from "@/app/trainers/trainers.module.css";
 import Image from "next/image";
+import BookingForm from "@/components/BookingForm";
 
 export default function Trainers() {
   return (
@@ -67,6 +68,7 @@ export default function Trainers() {
           </p>
         </div>
       </div>
+      <BookingForm />
     </div>
   );
 }
