@@ -10,6 +10,8 @@ import { auth } from "@clerk/nextjs/server";
 import Image from "next/image";
 import "./globals.css";
 import Link from "next/link";
+import ProfileForm from "@/components/ProfileForm";
+
 
 export const metadata = {
   title: "StayActive",
@@ -24,6 +26,7 @@ export default async function RootLayout({ children }) {
     `SELECT * FROM profiles WHERE clerk_id = $1`,
     [userId]
   );
+  const username = profiles.rows[0]?.username;
 
   if (profiles.rowCount === 0 && userId) {
     await db.query(`INSERT INTO profiles (clerk_id) VALUES ($1)`, [userId]);
@@ -55,10 +58,10 @@ export default async function RootLayout({ children }) {
               <Link href="/trainers" className="link">
                 Personal Trainers
               </Link>
-              <Link href="/blog" className="link">
-                Blog
+              <Link href="/book" className="link">
+                Book
               </Link>
-              <Link href="/account" className="link">
+              <Link href={`account/${username}`} className="link">
                 Account
               </Link>
             </nav>
@@ -71,7 +74,13 @@ export default async function RootLayout({ children }) {
               </SignedIn>
             </div>
           </header>
-          <main className="main-content">{children}</main>
+          <main className="main-content">
+          <SignedIn>
+              {profiles.rows[0]?.username && children}
+              {!profiles.rows[0]?.username && <ProfileForm />}
+            </SignedIn>
+            <SignedOut>{children}</SignedOut>
+            </main>
           <footer className="footer">
             <p>Made by Precious, Hannah, Nik & Themba &copy; 2024</p>
           </footer>

@@ -9,8 +9,8 @@ function App() {
       key: uuidv4(),
       content: (
         <Card
-          image="https://images.unsplash.com/photo-1627483298606-cf54c61779a9?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          title="The Great Gurn-Off: Ultimate Grimace Battle"
+          image="/assets/YellowWorkout.webp"
+          title="30 day Outdoor program"
           paragraph=""
         />
       ),
@@ -19,9 +19,9 @@ function App() {
       key: uuidv4(),
       content: (
         <Card
-          image="https://images.unsplash.com/photo-1607962837359-5e7e89f86776?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          title="Gurning Gala: Faces Gone Wild"
-          paragraph=""
+          image="/assets/OutdoorWork.webp"
+          title="Our Group Outdoor Classes"
+      
         />
       ),
     },
@@ -29,9 +29,9 @@ function App() {
       key: uuidv4(),
       content: (
         <Card
-          image="https://images.unsplash.com/photo-1541953453395-3a1b1ff8f935"
-          title="The Chronicles of Chins: Gurner's Quest"
-          paragraph=""
+          image="/assets/PersonalTrainer.webp"
+          title="One to One PT Session"
+    
         />
       ),
     },
@@ -39,9 +39,9 @@ function App() {
       key: uuidv4(),
       content: (
         <Card
-          image="https://images.unsplash.com/photo-1569363363196-11df019e7cea"
-          title="Gurnapalooza: Face-Off Extravaganza"
-          paragraph=""
+          image="/assets/Strength.webp"
+          title="A happy Customer"
+      
         />
       ),
     },
@@ -49,9 +49,9 @@ function App() {
       key: uuidv4(),
       content: (
         <Card
-          image="https://images.unsplash.com/photo-1526045612212-70caf35c14df"
-          title="Tim is very handsome."
-          paragraph=""
+          image="/assets/Yogawoman.webp"
+          title="Outdoor Yoga Session."
+      
         />
       ),
     },

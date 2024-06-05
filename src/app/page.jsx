@@ -1,4 +1,4 @@
-import { SignInButton } from "@clerk/nextjs";
+import { SignInButton, SignedIn, SignedOut } from "@clerk/nextjs";
 import Image from "next/image";
 import App from "@/components/Services";
 export default function Home() {
@@ -11,9 +11,19 @@ export default function Home() {
             <p className="text-2xl">
               Achieve complete wellness through StayActive
             </p>
+            <SignedIn>
+              <Image className="mt-10"
+              src="/assets/TheGym3.webp"
+              alt="group yoga"
+              width={1000}
+              height={400}
+              />
+            </SignedIn>
+            <SignedOut>
             <button className="p-3 bg-green-600 text-6xl rounded-lg	 ">
               <SignInButton className="sign-in-btn self-center" />
             </button>
+            </SignedOut>
           </div>
         </div>
         <div className="section-1">

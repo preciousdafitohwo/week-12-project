@@ -3,23 +3,19 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: bisque;
+  background-color: #007bff;  /* Green */
   width: 20rem;
   height: 100%;
   padding: 0 1rem 1rem 1rem;
   border-radius: 10px;
   margin: 10px;
+  color: #fff; /* White text */
 }
 
-/* .card img {
-    height: 80%;
-    width: 100%;
-    border-radius: 20px;
-  }
-   */
 .card h2 {
   margin: 0;
   margin-top: 1rem;
+  color: #fff; /* White */
 }
 
 .card p {
