@@ -18,8 +18,8 @@ export default async function ProfileForm() {
     );
     // revalidatePath(`profile/${username}`);
     // redirect(`profile/${username}`);
-    revalidatePath("/");
-    redirect("/");
+    revalidatePath(`account/${username}`);
+    redirect(`account/${username}`);
   }
 
   return (

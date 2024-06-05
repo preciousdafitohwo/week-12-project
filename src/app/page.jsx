@@ -3,7 +3,7 @@ import Image from "next/image";
 import App from "@/components/Services";
 export default function Home() {
   return (
-    <div>
+    <div className="home-page">
       <div className="main-div">
         <div className="section-1 justify-center home">
           <div>
@@ -11,14 +11,14 @@ export default function Home() {
             <p className="text-2xl">
               Achieve complete wellness through StayActive
             </p>
-            <SignedIn>
+            {/* <SignedIn>
               <Image className="mt-10"
               src="/assets/TheGym3.webp"
               alt="group yoga"
               width={1000}
               height={400}
               />
-            </SignedIn>
+            </SignedIn> */}
             <SignedOut>
             <button className="p-3 bg-green-600 text-6xl rounded-lg	 ">
               <SignInButton className="sign-in-btn self-center" />
@@ -30,11 +30,11 @@ export default function Home() {
           <App />
         </div>
       </div>
-      <div>
-        <h1 className="font-bold text-6xl text-center p-2">
+      <div className="health-tips">
+        <h1 className="font-bold text-6xl text-center p-2 mt-20">
           Health and Fitness Tips
         </h1>
-        <ul>
+        <ul className="p-10">
           <li>
             <strong>Walking: </strong>
             The average adult will walk 65,000 in their lifetime which is the

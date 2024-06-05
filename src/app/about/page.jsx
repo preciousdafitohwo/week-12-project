@@ -23,7 +23,7 @@ export default function About() {
             At StayActive, we are here to guide and support you as you
             complete your wellness journey. Our mission is to empower individuals
             to take control of their health and well-being through active living.
-            Our Mission We aim to promote holistic wellness, provide expert
+            We aim to promote holistic wellness, provide expert
             guidance, foster a supportive community, and encourage lifelong
             fitness. What We Offer Swimming: Dive into our comprehensive swimming
             guides. Strength Training: Discover dynamic workouts and personalized
