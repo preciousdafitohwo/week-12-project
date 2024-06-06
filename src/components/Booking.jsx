@@ -19,7 +19,8 @@ export default async function BookingForm () {
     const trainer = formData.get("trainer");
 
     await db.query(`INSERT INTO bookings (profile_id, name, email, date, time, trainer) VALUES ($1, $2, $3, $4, $5, $6)`,[profiles.rows[0].id, name, email, date, time, trainer]);
-
+      revalidatePath("/book");
+      redirect("/book");
     }
 
     return (

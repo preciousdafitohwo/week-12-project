@@ -8,7 +8,7 @@ export default function Book () {
             <SignedIn>
             <div className="p-5">
                 <h1 className="font-bold text-4xl text-center booking">Make a Booking with one of our Personal Trainers</h1>
-                <p className="text-center text-2xl p-3 booking"><strong>Please note: </strong>Our Personal Trainnig Sessions are for a duration of 1 Hour. </p>
+                <p className="text-center text-2xl p-3 booking"><strong>Please note: </strong>Our Personal Training Sessions are for a duration of 1 Hour. </p>
             </div>
             <BookingForm/>
             </SignedIn>
