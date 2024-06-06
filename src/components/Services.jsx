@@ -11,7 +11,6 @@ function App() {
         <Card
           image="/assets/YellowWorkout.webp"
           title="30 day Outdoor program"
-          paragraph=""
         />
       ),
     },

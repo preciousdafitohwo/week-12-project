@@ -16,8 +16,7 @@ export default async function ProfileForm() {
       `UPDATE profiles SET username = $1, age = $2, goals = $3 WHERE clerk_id = $4`,
       [username, age, goals, userId]
     );
-    // revalidatePath(`profile/${username}`);
-    // redirect(`profile/${username}`);
+    
     revalidatePath(`account/${username}`);
     redirect(`account/${username}`);
   }

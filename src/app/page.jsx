@@ -1,6 +1,6 @@
-import { SignInButton, SignedIn, SignedOut } from "@clerk/nextjs";
-import Image from "next/image";
+import { SignInButton, SignedOut } from "@clerk/nextjs";
 import App from "@/components/Services";
+
 export default function Home() {
   return (
     <div className="home-page">
@@ -11,14 +11,6 @@ export default function Home() {
             <p className="text-2xl">
               Achieve complete wellness through StayActive
             </p>
-            {/* <SignedIn>
-              <Image className="mt-10"
-              src="/assets/TheGym3.webp"
-              alt="group yoga"
-              width={1000}
-              height={400}
-              />
-            </SignedIn> */}
             <SignedOut>
             <button className="p-3 bg-green-600 text-6xl rounded-lg	 ">
               <SignInButton className="sign-in-btn self-center" />
@@ -68,8 +60,4 @@ export default function Home() {
   );
 }
 
-//landing page - first page -prompts users to sign-up or sign in to get started/access services
 
-// homepage - Logo, slogan...see what our specialists can offer and how to book- static nav, body(), footer
-
-//about page - our goal/mission and how we started this journey

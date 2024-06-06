@@ -1,11 +1,9 @@
 import { db } from "@/lib/db";
-import { auth } from "@clerk/nextjs/server";
 import { SignedIn, SignedOut } from "@clerk/nextjs";
 import NotFound from "./not-found";
 import Link from "next/link";
 
 export default async function Account({ params }) {
-  const { userId } = auth();
 
   const profiles = await db.query(
     `SELECT * FROM profiles WHERE username = $1`, [params.username]
@@ -15,11 +13,7 @@ export default async function Account({ params }) {
     return <NotFound />;
   }
 
-  const currentUser = await db.query(
-    `SELECT * FROM profiles WHERE clerk_id = $1`, [userId]
-  );
-
-  const isCurrentUser = currentUser.rows[0]?.username === params.username;
+ 
   const currentProfileId = profiles.rows[0]?.id;
 
   const bookings = await db.query(`SELECT * FROM bookings WHERE profile_id = $1`, [currentProfileId]);
