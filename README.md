@@ -34,8 +34,8 @@ Open the Application: Open http://localhost:3000 with your browser to see the si
 **Technologies Used**
 Next.js: A React framework for building modern web applications.
 Tailwind CSS: A utility-first CSS framework for styling.
-Auth.js (formerly Next Auth): For user authentication.
+Auth.js (Clerk Auth): For user authentication.
 Postgres: For data storage, accessed with raw SQL queries using the pg package.
 **Join Us!**
-Your wellness journey is unique, and we are here to support you every step of the way. Let's complete your wellness journey together with strength, resilience, and a sense of community at StayActive.com.
+Your wellness journey is unique, and we are here to support you every step of the way. Let's complete your wellness journey together with strength, resilience, and a sense of community at https://week-12-project.vercel.app/.
 
