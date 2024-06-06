@@ -1,31 +1,24 @@
-import { db } from "@/lib/db";
-import { revalidatePath } from "next/cache";
-import { redirect } from "next/navigation";
+"use client";
+import { useRef,useState } from "react";
+import { UpdateEnquiries } from "@/lib/enquiriesAction";
 
-
-
-export default async function EnquiriesForm () {
-
-  async function UpdateEnquiries(formData) {
-    "use server";
-    const name = formData.get("name");
-    const email = formData.get("email");
-    const subject = formData.get("subject");
-    const message = formData.get("message");
-
-  
-  await db.query(`INSERT INTO enquiries (name, email, subject, message) VALUES ($1, $2, $3, $4)`, [name, email, subject, message]);
-  revalidatePath("/trainers");
-    redirect("/trainers");
-  }
-  
+export default function EnquiriesForm () {
+  const [showSuccess, setShowSuccess] = useState(false);
+  const formRef = useRef(null);
 
 
   return (
     <div className="bg-white p-6 rounded-lg shadow-lg max-w-md mx-auto mt-10">
       <h2 className="text-2xl font-bold text-center text-blue-700 mb-4">Enquiries Form</h2>
       <p className="pb-3">Send an Enquiry to our team with any questions on how we can best support you to achieve your StayActive goals.</p>
-      <form className="space-y-4" action={UpdateEnquiries}>
+      <form className="space-y-4" 
+      ref={formRef}
+      action={(formData) => {
+        UpdateEnquiries(formData);
+        formRef.current.reset();
+        setShowSuccess(true);
+
+      }}>
         <div>
           <label className="block text-gray-700">Name:</label>
           <input
@@ -67,12 +60,13 @@ export default async function EnquiriesForm () {
           ></textarea>
         </div>
         <div className="text-center">
-          <button
+          { !showSuccess && <button
             type="submit"
             className="w-full px-3 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600"
           >
             Send Enquiry
-          </button>
+          </button>}
+          { showSuccess && <p className="bg-green-500 p-2 rounded-md font-bold">Thank you for your Enquiry</p>}
         </div>
       </form>
     </div>

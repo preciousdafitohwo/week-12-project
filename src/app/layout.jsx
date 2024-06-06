@@ -59,7 +59,7 @@ export default async function RootLayout({ children }) {
                 Personal Trainers
               </Link>
               <Link href="/book" className="link">
-                Book
+                Make a Booking
               </Link>
               <Link href={`account/${username}`} className="link">
                 Account
